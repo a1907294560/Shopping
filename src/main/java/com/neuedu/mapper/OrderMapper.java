@@ -2,6 +2,8 @@ package com.neuedu.mapper;
 
 import com.neuedu.pojo.Order;
 
+import java.util.List;
+
 public interface OrderMapper {
     int deleteByPrimaryKey(Integer orderid);
 
@@ -14,4 +16,6 @@ public interface OrderMapper {
     int updateByPrimaryKeySelective(Order record);
 
     int updateByPrimaryKey(Order record);
+
+    public List<Order> getOrderList();
 }
