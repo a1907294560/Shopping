@@ -21,6 +21,11 @@
     from order
     where orderid = #{orderid,jdbcType=INTEGER}
   </select>
+  <select id="getOrderList" parameterType="Order" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from order
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from order
     where orderid = #{orderid,jdbcType=INTEGER}
